@@ -1,0 +1,29 @@
+:root {
+    --black : rgba(0, 0, 0, 1);
+    --alto : rgba(217, 217, 217, 1);
+    --white : rgba(255,255,255, 1);
+    --blue : #0e1048;   
+
+    --font-size-xs : 16px;
+    --font-size-s : 18px;
+    --font-size-m : 20px;
+
+    --font-family-inter: "Inter";
+    --font-family-poppins: "Poppins";
+}
+
+.poppins-normal-white-18px {
+    color: var(--white);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-normal-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    font-style: normal;
+}

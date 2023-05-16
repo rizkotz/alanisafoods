@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700,500|Poppins:400,700");
+
+.macbook-pro-14-1 {
+    align-items: flex-start;
+    background-color: var(--white);
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    height: 937px;
+    width: 1512px;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* .container {
+    display: flex;
+} */
+
+
+.typemetric-stylestyle-container {
+    align-items: flex-start;
+    align-self: flex-end; 
+    display: flex;
+    top: 50px;
+    gap: 71px;
+    margin-right: 17px;
+    margin-top: 93px;
+    min-width: 1186px;
+    z-index: 1; 
+
+    margin-left: 300px; 
+}
+
+.typemetric-stylestyle-1-container {
+    align-items: flex-start;
+    align-self: flex-end; 
+    display: flex;
+    top: 50px;
+    gap: 71px;
+    margin-right: 17px;
+    margin-top: 40px;
+    min-width: 1186px;
+    z-index: 1; 
+
+    margin-left: 300px; 
+}
+
+.type-metric-style-style {
+    height: 216px;
+    width: 348px;
+    
+}
+
+.tambah-barang {
+    align-items: flex-start;
+    display: flex;
+    gap: 1px;
+    left: 43px;
+    position: fixed;
+    top: 390px;
+    width: fit-content;
+    z-index: 6;
+}
+
+.tambah-barang-1 {
+    height: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 181px;
+}
+
+.add-file {
+    height: 25px;
+    min-width: 25px;
+    position: relative;
+}
+
+.log-out {
+    left: 1407px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    top: 15px;
+    width: 79px;
+    z-index: 14;
+}
+
+.total-barang {
+    align-items: center;
+    display: flex;
+    gap: 3px;
+    left: 41px;
+    position: fixed;
+    top: 166px;
+    width: fit-content;
+    z-index: 10;
+}
+
+.total-barang-1 {
+    height: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 181px;
+}
+.file {
+    height: 25px;
+    min-width: 25px;
+    position: relative;
+}
+
+.user-admin-1 {
+    color: var(--white);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    left: 93px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    top: 84px;
+    white-space: nowrap;
+    z-index: 13;
+}
+
+.macbook-pro-14-1 .barang {
+    align-items: center;
+    display: flex;
+    gap: 3px;
+    left: 41px;
+    position: fixed;
+    width: fit-content;
+}
+
+.barang-keluar {
+    top: 275px;
+    z-index: 8;
+}
+
+.barang-keluar-1 {
+    height: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 181px;
+}
+
+.right-2 {
+    height: 25px;
+    min-width: 25px;
+    position: relative;
+}
+
+.male-user-1 {
+    height: 65px;
+    left: 9px;
+    position: fixed;
+    top: 64px;
+    width: 65px;
+    z-index: 20;
+}
+
+.macbook-pro-14-1 .rectangle {
+    left: 0;
+    position: fixed;
+}
+
+.rectangle-1 {
+    background-color: var(--alto);
+    height: 54px;
+    top: 0;
+    width: 1512px;
+    z-index: 11;
+}
+
+.menu-rounded {
+    height: 25px;
+    left: 294px;
+    position: fixed;
+    top: 13px;
+    width: 25px;
+    z-index: 19;
+}
+
+.data-transaksi {
+    align-items: center;
+    display: flex;
+    gap: 1px;
+    left: 41px;
+    position: fixed;
+    top: 331px;
+    width: fit-content;
+    z-index: 7;
+}
+
+.data-transaksi-1 {
+    height: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 181px;
+}
+
+.online-payment {
+    height: 27px;
+    min-width: 27px;
+    position: relative;
+}
+
+.logout {
+    height: 22px;
+    left: 1218px;
+    position: fixed;
+    top: 16px;
+    width: 22px;
+    z-index: 17;
+}
+
+.detail-login {
+    align-items: flex-start;
+    align-self: center;
+    display: flex;
+    height: 225px;
+    margin-right: 122px;
+    margin-top: 70px;
+    min-width: 752px;
+    z-index: 3;
+}
+
+.overlap-group {
+    align-items: flex-start;
+    background-color: var(--alto);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-height: 225px;
+    padding: 21px 17px;
+    width: 746px;
+}
+
+.flex-row {
+    align-items: flex-start;
+    display: flex;
+    gap: 23px;
+    height: 116px;
+    margin-left: 2px;
+    min-width: 431px;
+}
+
+.rizqi-fauzan-adm {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 40px;
+    min-height: 116px;
+    width: 231px;
+}
+
+.nama-username-level-hak-akses {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 40px;
+    min-height: 116px;
+    width: 177px;
+}
+
+.detail-login-1 {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 40px;
+    min-height: 45px;
+    white-space: nowrap;
+}
+
+.rectangle-2 {
+    background-color: var(--blue);
+    height: 887px;
+    top: 50px;
+    width: 282px;
+    z-index: 4;
+}
+
+.alanisafoods {
+    color: #0e2163;
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    left: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    top: 10px;
+    width: 215px;
+    z-index: 16;
+}
+
+.log-out-1 {
+    align-items: flex-start;
+    display: flex;
+    gap: 3px;
+    left: 41px;
+    top: 446px;
+    position: fixed;
+    width: fit-content;
+    z-index: 5;
+}
+
+.log-out-2 {
+    height: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 181px;
+}
+
+.logout-1 {
+    height: 25px;
+    min-width: 25px;
+    position: relative;
+}
+
+.type-metric-style-style-12 {
+    align-self: center;
+    height: 216px;
+    margin-right: 546px;
+    margin-top: 28px;
+    margin-left: 300px;
+    width: 348px;
+    z-index: 2;
+}
+.type-metric-style-style-9 {
+    align-self: center;
+    height: 216px;
+    margin-right: 546px;
+    margin-top: 28px;
+    margin-left: 300px;
+    width: 348px;
+    z-index: 2;
+}
+.type-metric-style-style-10 {
+    align-self: center;
+    height: 216px;
+    margin-right: 546px;
+    margin-top: 28px;
+    margin-left: 300px;
+    width: 348px;
+    z-index: 2;
+}
+.type-metric-style-style-11 {
+    align-self: center;
+    height: 216px;
+    margin-right: 546px;
+    margin-top: 28px;
+    margin-left: 300px;
+    width: 348px;
+    z-index: 2;
+}
+
+.rectangle-3 {
+    background-color: #c4c2c2;
+    height: 54px;
+    top: 0;
+    width: 282px;
+    z-index: 12;
+}
+
+.user-admin {
+    left: 1090px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    top: 15px;
+    width: 109px;
+    z-index: 15;
+}
+.logout-atas{
+    left: 1244px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    top: 15px;
+    width: 109px;
+    z-index: 15;
+}
+
+.barang-masuk {
+    top: 222px;
+    z-index: 9;
+}
+
+.barang-masuk-1 {
+    height: 31px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 181px;
+}
+
+.reply-arrow {
+    height: 25px;
+    min-width: 25px;
+    position: relative;
+}
+
+.male-user {
+    height: 25px;
+    left: 1065px;
+    position: fixed;
+    top: 16px;
+    width: 25px;
+    z-index: 18;
+}
+
