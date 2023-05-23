@@ -94,7 +94,7 @@ include 'G:\installan\TUGAS TYO\. SEMESTER 6\PROYEK SISTEM INFORMASI\PROJECT_SI\
                             <th scope="col">Merek</th>
                             <th scope="col">Jumlah</th>
                             <th scope="col">Jenis Barang</th>
-                            <th scope="col">Keterangan</th>
+                            <th scope="col">Keterangan Barang</th>
                         </tr>
                     </thead>
                     <tbody>
