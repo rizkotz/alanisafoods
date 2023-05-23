@@ -1,3 +1,7 @@
+<?php
+include 'G:\installan\TUGAS TYO\. SEMESTER 6\PROYEK SISTEM INFORMASI\PROJECT_SI\alanisafoods\routes\koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +9,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Barang</title>
+    <title>Transaksi</title>
     <link rel="shortcut icon" href="{{ asset('img/logotoko2.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('style/styleTambahBarang.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/styleDataTransaksi.css') }}">
     <link rel="stylesheet" href="{{ asset('style/styleguide.css') }}">
 </head>
 
@@ -28,9 +32,16 @@
             <div class="logout-atas poppins-normal-black-16px">LOG OUT</div>
         </a>
         <div class="container">
+            <div class="container-1">
+                <h1 class="tittle-1">
+                    <span class="span0">History Transaksi</span>
+                    <span class="span1">Data Transaksi</span>
+                </h1>
+            </div>
             <div class="rectangle-2 rectangle">
                 <img class="male-user-1" src="img/Male User.png" alt="Male User" />
                 <div class="user-admin-1">User Admin </div>
+
                 <a href="/totalBarang">
                     <div class="total-barang">
                         <img class="file" src="img/File.png" alt="File" />
@@ -68,43 +79,46 @@
                     </div>
                 </a>
             </div>
-            <div class="formulir">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
+            <div class="container-2">
+            <div class="table">
+                <div class="head">
+                    <div class="tittle-2">
+                        <span class="span2">Data Transaksi</span>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-        <div class="detail-login">
-            <div class="overlap-group">
-                <div class="detail-login-1">Detail Login</div>
-                <div class="flex-row">
-                    <p class="nama-username-level-hak-akses">
-                        Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <br />Username<br />Level Hak Akses
-                    </p>
-                    <p class="rizqi-fauzan-adm">
-                        : Rizqi
-                        Fauzan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <br />: admin<br />: administrator/owner
-                    </p>
                 </div>
+                <table class="table1">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama Barang</th>
+                            <th scope="col">Merek</th>
+                            <th scope="col">Jumlah</th>
+                            <th scope="col">Jenis Barang</th>
+                            <th scope="col">Keterangan Barang</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $tampil = mysqli_query($mysqli, "select * from product");
+                            $no = 1;
+                            while($hasil = mysqli_fetch_array($tampil)){
+                        ?>
+                        <tr>
+                            <td><?php echo $no++; ?></td>
+                            <td><?php echo $hasil['nama_product']; ?></td>
+                            <td><?php echo $hasil['merek']; ?></td>
+                            <td><?php echo $hasil['jumlah_barang']; ?></td>
+                            <td><?php echo $hasil['jenis_barang']; ?></td>
+                            <td><?php echo $hasil['keterangan']; ?></td>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
