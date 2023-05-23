@@ -75,7 +75,7 @@
         </div>
         <div class="detail-login">
             <div class="overlap-group">
-                <div class="detail-login-1">Detailllllllllll Login</div>
+                <div class="detail-login-1">Detail Login</div>
                 <div class="flex-row">
                     <p class="nama-username-level-hak-akses">
                         Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
