@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: index.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +26,9 @@
         </div>
         <div class="rectangle-3 rectangle">
         </div>
-        <div class="alanisafoods">Alanisafoods</div>
+        <a href="/">
+            <div class="alanisafoods">Alanisafoods</div>
+        </a>
         <img class="menu-rounded" src="{{ asset('img/Menu Rounded.png') }}" alt="Menu Rounded" />
         <img class="male-user" src="img/Male User (1).png" alt="Male User" />
         <div class="user-admin poppins-normal-black-16px">User Admin</div>

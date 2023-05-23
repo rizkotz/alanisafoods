@@ -1,3 +1,6 @@
+<?php
+include 'G:\installan\TUGAS TYO\. SEMESTER 6\PROYEK SISTEM INFORMASI\PROJECT_SI\alanisafoods\routes\koneksi.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Total Barang</title>
     <link rel="shortcut icon" href="{{ asset('img/logotoko2.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/styleTotal.css') }}">
     <link rel="stylesheet" href="{{ asset('style/styleguide.css') }}">
 </head>
 
@@ -17,7 +20,9 @@
         </div>
         <div class="rectangle-3 rectangle">
         </div>
-        <div class="alanisafoods">Alanisafoods</div>
+        <a href="/">
+            <div class="alanisafoods">Alanisafoods</div>
+        </a>
         <img class="menu-rounded" src="{{ asset('img/Menu Rounded.png') }}" alt="Menu Rounded" />
         <img class="male-user" src="img/Male User (1).png" alt="Male User" />
         <div class="user-admin poppins-normal-black-16px">User Admin</div>
@@ -26,6 +31,12 @@
             <div class="logout-atas poppins-normal-black-16px">LOG OUT</div>
         </a>
         <div class="container">
+            <div class="container-1">
+                <h1 class="tittle-1">
+                    <span class="span0">Total Barang</span>
+                    <span class="span1">Stok Barang</span>
+                </h1>
+            </div>
             <div class="rectangle-2 rectangle">
                 <img class="male-user-1" src="img/Male User.png" alt="Male User" />
                 <div class="user-admin-1">User Admin </div>
@@ -66,21 +77,37 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="detail-login">
-            <div class="overlap-group">
-                <div class="detail-login-1">Detail Login</div>
-                <div class="flex-row">
-                    <p class="nama-username-level-hak-akses">
-                        Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <br />Username<br />Level Hak Akses
-                    </p>
-                    <p class="rizqi-fauzan-adm">
-                        : Rizqi
-                        Fauzan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <br />: admin<br />: administrator/owner
-                    </p>
-                </div>
+            <div class="table">
+                <table class="table1">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama Barang</th>
+                            <th scope="col">Merek</th>
+                            <th scope="col">Jumlah</th>
+                            <th scope="col">Jenis Barang</th>
+                            <th scope="col">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $tampil = mysqli_query($mysqli, "select * from product");
+                        $no = 1;
+                        while($hasil = mysqli_fetch_array($tampil)){
+                    ?>
+                        <tr>
+                            <td><?php echo $no++; ?></td>
+                            <td><?php echo $hasil['nama_product']; ?></td>
+                            <td><?php echo $hasil['merek']; ?></td>
+                            <td><?php echo $hasil['jumlah_barang']; ?></td>
+                            <td><?php echo $hasil['jenis_barang']; ?></td>
+                            <td><?php echo $hasil['keterangan']; ?></td>
+                        </tr>
+                        <?php
+                        }
+                    ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

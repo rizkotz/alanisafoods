@@ -21,8 +21,6 @@ Route::get('/index', function () {
 });
 Route::get('/totalBarang', function () {
     return view('totalBarang');
-});Route::get('/totalBarang', function () {
-    return view('totalBarang');
 });
 Route::get('/barangMasuk', function () {
     return view('barangMasuk');
@@ -36,3 +34,4 @@ Route::get('/dataTransaksi', function () {
 Route::get('/tambahBarang', function () {
     return view('tambahBarang');
 });
+Route::get('/pegawai/tambah','PegawaiController@tambah');
