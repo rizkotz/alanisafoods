@@ -1,6 +1,6 @@
 <?php
 
-include 'G:\installan\TUGAS TYO\. SEMESTER 6\PROYEK SISTEM INFORMASI\PROJECT_SI\alanisafoods\routes\koneksi.php';
+include 'D:\KULIAH\SEMESTER 6\Proyek SI\Project_SI\alanisafoods\routes\koneksi.php';
 
 error_reporting(0);
 

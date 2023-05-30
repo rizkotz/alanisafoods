@@ -9,6 +9,10 @@
     <link rel="shortcut icon" href="{{ asset('img/logotoko2.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('style/styleTambahBarang.css') }}">
     <link rel="stylesheet" href="{{ asset('style/styleguide.css') }}">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -68,43 +72,70 @@
                     </div>
                 </a>
             </div>
+
             <div class="formulir">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
+                <form action="proses.php" method="POST">
+                    <div class="control-group after-add-more">
+                      <label>Nama Barang</label>
+                      <input type="text" name="nama[]" class="form-control">
+                      <label>Merek</label>
+                      <input type="text" name="mrk[]" class="form-control">
+                      <label>Jumlah Barang</label>
+                      <input type="text" name="jml[]" class="form-control">
+                      <label>Jenis Barang</label>
+                      <input type="text" name="jenis[]" class="form-control">
+                      <label>Keterangan</label>
+                      <select class="form-control" name="keterangan[]">
+                          <option>Baru</option>
+                          <option>Bekas</option>
+                        </select>
+                      <br>
+                      <button class="btn btn-success add-more" type="button">
+                        <i class="glyphicon glyphicon-plus"></i> Add
+                      </button>
+                      <hr>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <button class="btn btn-success" type="submit">Submit</button>
+                  </form>
+
+                  <div class="copy hide">
+                    <div class="control-group">
+                        <label>Nama Barang</label>
+                        <input type="text" name="nama[]" class="form-control">
+                        <label>Merek</label>
+                        <input type="text" name="mrk[]" class="form-control">
+                        <label>Jumlah Barang</label>
+                        <input type="text" name="jml[]" class="form-control">
+                        <label>Jenis Barang</label>
+                        <input type="text" name="jenis[]" class="form-control">
+                        <label>Keterangan</label>
+                        <select class="form-control" name="keterangan[]">
+                            <option>Baru</option>
+                            <option>Bekas</option>
+                      </select>
+                      <br>
+                      <button class="btn btn-danger remove" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
+                      <hr>
                     </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                  </div>
+
+                  <script type="text/javascript">
+                    $(document).ready(function() {
+                      $(".add-more").click(function(){
+                          var html = $(".copy").html();
+                          $(".after-add-more").after(html);
+                      });
+
+                      // saat tombol remove dklik control group akan dihapus
+                      $("body").on("click",".remove",function(){
+                          $(this).parents(".control-group").remove();
+                      });
+                    });
+                </script>
+
             </div>
         </div>
-        <div class="detail-login">
-            <div class="overlap-group">
-                <div class="detail-login-1">Detail Login</div>
-                <div class="flex-row">
-                    <p class="nama-username-level-hak-akses">
-                        Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <br />Username<br />Level Hak Akses
-                    </p>
-                    <p class="rizqi-fauzan-adm">
-                        : Rizqi
-                        Fauzan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <br />: admin<br />: administrator/owner
-                    </p>
-                </div>
-            </div>
-        </div>
+
     </div>
 </body>
 
