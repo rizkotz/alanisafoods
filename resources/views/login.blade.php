@@ -1,60 +1,36 @@
-<?php
-
-include 'D:\KULIAH\SEMESTER 6\Proyek SI\Project_SI\alanisafoods\routes\koneksi.php';
-
-error_reporting(0);
-
-session_start();
-
-if (isset($_SESSION['username'])) {
-    header('Location: dashboard.php');
-}
-
-if (isset($_GET['submit'])) {
-    $username = $_GET['username'];
-    $password = md5($_GET['password']);
-
-    $sql = "SELECT * FROM pegawai WHERE username='$username' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
-    if ($result->num_rows > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        header('Location: dashboard.php');
-    } else {
-        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
-    }
-}
-?>
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
-    <title> LOGIN ALANISAFOODS </title>
-    <link rel="shortcut icon" href="{{ asset('img/logotoko2.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('style/stylelogin.css') }}">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-    <div class="container">
-        <form action="/" method="get" class="index">
-            <div class="title">Login Admin</div>
-            <div class="input-box underline">
-                <input type="username" placeholder="Enter Your Email" required>
-                <div class="underline"></div>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Enter Your Password" required>
-                <div class="underline"></div>
-            </div>
-            <div class="input-box button">
-                <input type="submit" name="" value="Continue">
-            </div>
-        </form>
+@extends('templates/base2')
+@section('title','Login')
+@section('container')
+<div class="container">
+    <div class="card">
+        <article class="card-body">
+            <a href="{{url('register')}}" class="float-right btn btn-outline-primary">Sign up</a>
+            <h4 class="card-title mb-4 mt-1">Sign in</h4>
+            @if(\Session::has('alert'))
+                <div class="alert alert-danger">
+                    <div>{{Session::get('alert')}}</div>
+                </div>
+            @endif
+            @if(\Session::has('alert-success'))
+                <div class="alert alert-success">
+                    <div>{{Session::get('alert-success')}}</div>
+                </div>
+            @endif
+            <form action="{{ url('/loginPost') }}" method="post">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"></input>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+            </form>
+        </article>
     </div>
-</body>
-
-</html>
+</div>
+@endsection

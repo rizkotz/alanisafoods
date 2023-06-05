@@ -39,17 +39,15 @@ class ProjectController extends Controller
 
     }
 //--------------------------------------------------------
-    public function index(){
-        return view('login');
+
+    public function dashboard(){
+        return view('dashboard');
     }
     public function keluar(){
         return view('barangKeluar');
     }
     public function masuk(){
         return view('barangMasuk');
-    }
-    public function dashboard(){
-        return view('dashboard');
     }
     public function transaksi(){
         return view('dataTransaksi');

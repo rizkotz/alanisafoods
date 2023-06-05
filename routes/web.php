@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +18,27 @@ use App\Http\Controllers\ProjectController;
 
 //ROUTE CRUD
 
+//ROUTE LOGIN
+Route::get('/',                            [LoginController::class,'index']);
+Route::get('/login',                            [LoginController::class,'login']);
+Route::post('/loginPost',                            [LoginController::class,'loginPost']);
+Route::get('/logout',                            [LoginController::class,'logout']);
+
+/*
+Route::get('/', 'UserController@index');
+Route::get('/login', 'UserController@login');
+Route::post('/loginPost', 'UserController@loginPost');
+Route::get('/register', 'UserController@register');
+Route::post('/registerPost', 'UserController@registerPost');
+Route::get('/logout', 'UserController@logout');
+*/
+
 //ROUTE HALAMAN
-Route::get('/',                 [ProjectController::class,'index']);
+Route::get('/dashboard',                    [ProjectController::class,'dashboard']);
 Route::get('/barangKeluar',                 [ProjectController::class,'keluar']);
-Route::get('/barangMasuk',                 [ProjectController::class,'masuk']);
-Route::get('/dashboard',                 [ProjectController::class,'dashboard']);
+Route::get('/barangMasuk',                  [ProjectController::class,'masuk']);
 Route::get('/tambahBarang',                 [ProjectController::class,'tambah']);
-Route::get('/totalBarang',                 [ProjectController::class,'total']);
+Route::get('/totalBarang',                  [ProjectController::class,'total']);
 
 
 
