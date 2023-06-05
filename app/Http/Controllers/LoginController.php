@@ -27,7 +27,7 @@ $data = ModelLog::where('email',$email)->first();
                 Session::put('name',$data->name);
                 Session::put('email',$data->email);
                 Session::put('login',TRUE);
-                return redirect('/');
+                return redirect()->action([ProjectController::class,'dashboard']);
             }
             else{
                 return redirect('login')->with('alert','Email atau Password anda salah!');

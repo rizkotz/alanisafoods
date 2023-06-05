@@ -23,7 +23,8 @@ Route::get('/',                            [LoginController::class,'index']);
 Route::get('/login',                            [LoginController::class,'login']);
 Route::post('/loginPost',                            [LoginController::class,'loginPost']);
 Route::get('/logout',                            [LoginController::class,'logout']);
-
+Route::get('/register',                     [LoginController::class,'register']);
+Route::post('/registerPost',                 [LoginController::class,'registerPost']);
 /*
 Route::get('/', 'UserController@index');
 Route::get('/login', 'UserController@login');
