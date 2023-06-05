@@ -9,6 +9,10 @@
     <link rel="shortcut icon" href="{{ asset('img/logotoko2.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
     <link rel="stylesheet" href="{{ asset('style/styleguide.css') }}">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -70,6 +74,51 @@
             </div>
         </div>
     </div>
+
+    @section('content')
+    <div class = "alert alert-primary text-center">Sistem Informasi Inventori</div>
+    @show
+
+     <!-- jQuery -->
+     <script src="/js/jquery-2.1.0.min.js"></script>
+
+     <!-- Bootstrap -->
+     <script src="/js/popper.js"></script>
+     <script src="/js/bootstrap.min.js"></script>
+
+     <!-- Plugins -->
+     <script src="/js/owl-carousel.js"></script>
+     <script src="/js/accordions.js"></script>
+     <script src="/js/datepicker.js"></script>
+     <script src="/js/scrollreveal.min.js"></script>
+     <script src="/js/waypoints.min.js"></script>
+     <script src="/js/jquery.counterup.min.js"></script>
+     <script src="/js/imgfix.min.js"></script>
+     <script src="/js/slick.js"></script>
+     <script src="/js/lightbox.js"></script>
+     <script src="/js/isotope.js"></script>
+
+     <!-- Global Init -->
+     <script src="/js/custom.js"></script>
+
+     <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+            });
+        });
+
+    </script>
+
 </body>
 </html>
 
