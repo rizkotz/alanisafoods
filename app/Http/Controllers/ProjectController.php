@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barang;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -39,33 +40,25 @@ class ProjectController extends Controller
     }
 //--------------------------------------------------------
     public function index(){
-        return view('home');
+        return view('login');
     }
-    public function mens(){
-        return view('men');
+    public function keluar(){
+        return view('barangKeluar');
     }
-    public function women(){
-        return view('women');
+    public function masuk(){
+        return view('barangMasuk');
     }
-    public function kids(){
-        return view('kids');
+    public function dashboard(){
+        return view('dashboard');
     }
-    public function explore(){
-        return view('explore');
+    public function transaksi(){
+        return view('dataTransaksi');
     }
-    public function aboutUs(){
-        return view('about');
+    public function tambah(){
+        return view('tambahBarang');
     }
-    public function contactUs(){
-        return view('contact');
+    public function total(){
+        return view('totalBarang');
     }
-    public function products(){
-        return view('products');
-    }
-    public function cart(){
-        return view('cart');
-    }
-    public function checkOut(){
-        return view('checkOut');
-    }
+
 }
