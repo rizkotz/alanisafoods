@@ -27,7 +27,7 @@
         <img class="menu-rounded" src="{{ asset('img/Menu Rounded.png') }}" alt="Menu Rounded" />
         <img class="male-user" src="img/Male User (1).png" alt="Male User" />
         <div class="user-admin poppins-normal-black-16px">User Admin</div>
-        <a href="/index">
+        <a href="/login">
             <img class="logout" src="img/Logout.png" alt="Logout" />
             <div class="logout-atas poppins-normal-black-16px">LOG OUT</div>
         </a>
@@ -65,7 +65,7 @@
                         <div class="tambah-barang-1 poppins-normal-white-18px">Tambah Barang</div>
                     </div>
                 </a>
-                <a href="/index">
+                <a href="/login">
                     <div class="log-out-1">
                         <img class="logout-1" src="img/Logout (1).png" alt="Logout" />
                         <div class="logout-2 poppins-normal-white-18px">LOGOUT</div>

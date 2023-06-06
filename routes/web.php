@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostController;
 use Illuminate\Auth\Events\Login;
 
 /*
@@ -17,6 +18,8 @@ use Illuminate\Auth\Events\Login;
 */
 
 //ROUTE CRUD
+Route::resource('/posts', PostController::class);
+
 
 //ROUTE LOGIN
 Route::get('/',                            [LoginController::class,'index']);
@@ -37,8 +40,6 @@ Route::get('/logout', 'UserController@logout');
 //ROUTE HALAMAN
 Route::get('/dashboard',                    [ProjectController::class,'dashboard']);
 Route::get('/barangKeluar',                 [ProjectController::class,'keluar']);
-Route::get('/barangMasuk',                  [ProjectController::class,'masuk']);
-Route::get('/tambahBarang',                 [ProjectController::class,'tambah']);
 Route::get('/totalBarang',                  [ProjectController::class,'total']);
 
 

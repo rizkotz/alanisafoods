@@ -46,15 +46,11 @@ class ProjectController extends Controller
     public function keluar(){
         return view('barangKeluar');
     }
-    public function masuk(){
-        return view('barangMasuk');
-    }
+
     public function transaksi(){
         return view('dataTransaksi');
     }
-    public function tambah(){
-        return view('tambahBarang');
-    }
+
     public function total(){
         return view('totalBarang');
     }
