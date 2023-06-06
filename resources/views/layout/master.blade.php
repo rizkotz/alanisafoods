@@ -41,7 +41,7 @@
                         <div class="total-barang-1 poppins-normal-white-18px">Total Barang</div>
                     </div>
                 </a>
-                <a href="/barangMasuk">
+                <a href="/posts">
                     <div class="barang-masuk barang">
                         <img class="reply-arrow" src="img/Reply Arrow.png" alt="Reply Arrow" />
                         <div class="barang-masuk-1 poppins-normal-white-18px">Barang Masuk</div>
@@ -59,7 +59,7 @@
                         <div class="data-transaksi-1 poppins-normal-white-18px">Data Transaksi</div>
                     </div>
                 </a>
-                <a href="/tambahBarang">
+                <a href="/posts/create">
                     <div class="tambah-barang">
                         <img class="add-file" src="img/Add File.png" alt="Add File" />
                         <div class="tambah-barang-1 poppins-normal-white-18px">Tambah Barang</div>
@@ -121,4 +121,3 @@
 
 </body>
 </html>
-

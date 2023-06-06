@@ -5,6 +5,10 @@
 @section('content')
 
     <div class="container-2">
+        <h1 class="tittle-1">
+            <span class="span0">History</span>
+            <span class="span1">Barang Masuk</span>
+        </h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
@@ -33,7 +37,7 @@
                                     <td>{{ $post->keterangan }}</td>
                                     <td class="text-center">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>

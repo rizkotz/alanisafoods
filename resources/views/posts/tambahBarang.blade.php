@@ -4,6 +4,9 @@
 
 @section('content')
     <div class="container-2">
+        <h1 class="tittle-1">
+            <span class="span0">Tambah Barang</span>
+        </h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">

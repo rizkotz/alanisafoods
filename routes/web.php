@@ -41,6 +41,7 @@ Route::get('/logout', 'UserController@logout');
 Route::get('/dashboard',                    [ProjectController::class,'dashboard']);
 Route::get('/barangKeluar',                 [ProjectController::class,'keluar']);
 Route::get('/totalBarang',                  [ProjectController::class,'total']);
+Route::get('/dataTransaksi',                [ProjectController::class,'transaksi']);
 
 
 
