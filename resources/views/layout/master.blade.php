@@ -21,7 +21,7 @@
         </div>
         <div class="rectangle-3 rectangle">
         </div>
-        <a href="/">
+        <a href="/dashboard">
             <div class="alanisafoods">Alanisafoods</div>
         </a>
         <img class="menu-rounded" src="{{ asset('img/Menu Rounded.png') }}" alt="Menu Rounded" />
